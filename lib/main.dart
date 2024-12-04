@@ -26,7 +26,7 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform,
   );
  runApp( MaterialApp(
-    title: 'Flutter Demo',
+
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       useMaterial3: false,
