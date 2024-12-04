@@ -16,6 +16,7 @@ class _ChooseFloorViewState extends State<ChooseFloorView> {
     final h= MediaQuery.sizeOf(context).height;
     final w= MediaQuery.sizeOf(context).width;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -25,13 +26,13 @@ class _ChooseFloorViewState extends State<ChooseFloorView> {
               SizedBox(height: h*0.04,),
               Text('Choose Your Floor Plan',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
               SizedBox(height: h*0.02,),
-              Image.asset('assets/images/logo.png',height:h*0.45,),
+              Center(child: Image.asset('assets/images/map.jpg',height:h*0.45,)),
               SizedBox(height: h*0.02,),
 
               Text('Description',style: GoogleFonts.roboto(color: appColors.greyy,fontSize:14,fontWeight: FontWeight.w500),),
               SizedBox(height: h*0.02,),
 
-              Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 12,height: 1.2)),
+              Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 12,height: 1.5)),
               SizedBox(height: h*0.02,),
 
               Text('Key Features',style: GoogleFonts.roboto(color: appColors.greyy,fontSize:14,fontWeight: FontWeight.w500),),
@@ -49,7 +50,7 @@ class _ChooseFloorViewState extends State<ChooseFloorView> {
 
                 ]
               ),
-              SizedBox(height: h*0.02,),
+
 
               SizedBox(height: h*0.06,),
 

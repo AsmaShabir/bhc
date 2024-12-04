@@ -57,7 +57,10 @@ class _bathroomFixturesState extends State<bathroomFixtures> {
                                   borderRadius: BorderRadius.circular(14),
                                 ),
 
-                                child: Image.asset('assets/images/facade.png',fit: BoxFit.cover,),
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(14),
+
+                                    child: Image.asset('assets/images/facade.png',fit: BoxFit.cover,)),
                               ),
                               SizedBox(width:w*0.03 ,),
                               Flexible(

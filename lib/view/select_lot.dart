@@ -16,6 +16,7 @@ class _SelectLotViewState extends State<SelectLotView> {
     final h= MediaQuery.sizeOf(context).height;
     final w= MediaQuery.sizeOf(context).width;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -25,13 +26,13 @@ class _SelectLotViewState extends State<SelectLotView> {
               SizedBox(height: h*0.04,),
               Text('Choose Your Lot Size',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
               SizedBox(height: h*0.02,),
-              Image.asset('assets/images/logo.png',height:h*0.45,),
+              Center(child: Image.asset('assets/images/map.jpg',height:h*0.45,)),
               SizedBox(height: h*0.02,),
 
               Text('Description',style: GoogleFonts.roboto(color: appColors.greyy,fontSize:14,fontWeight: FontWeight.w500),),
               SizedBox(height: h*0.02,),
 
-              Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 12)),
+              Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 12,height: 1.5)),
               SizedBox(height: h*0.02,),
 
               Row(

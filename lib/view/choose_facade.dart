@@ -1,5 +1,6 @@
 
 
+import 'package:bhc/view/facade_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,18 +35,44 @@ class _ChooseFacadeViewState extends State<ChooseFacadeView> {
                     scrollDirection: Axis.vertical,
                     itemCount: 10,
                       itemBuilder: (context,index){
-                        return ListTile(
-                          leading:
-                          SizedBox(
-                            width:90,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8),
-                                child: Image.asset('assets/images/facade.png',height:h*0.2,width: w*0.3,)),
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            children: [
+                              SizedBox(height: h*0.03,),
 
-                            ),
-                          title:Text('Facade name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
-                          subtitle: Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.',textAlign: TextAlign.start,style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 10,height: 1.8)),
+                              InkWell(
+                                onTap: (){
+                                  showBottomSheet(context: context, builder: (context)=>FacadeImageView(),backgroundColor: Colors.black.withOpacity(0.5));
+                                },
+                                child: Container(
+                                  height:h*0.15,
+                                  width: w*0.3,
+                                  decoration: BoxDecoration(
 
+                                  ),
+
+                                  child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(14),
+
+                                      child: Image.asset('assets/images/facade.png',fit: BoxFit.cover,)),
+                                ),
+                              ),
+                              SizedBox(width:w*0.03 ,),
+                              Flexible(
+                                child: Column(
+                                  crossAxisAlignment:CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Facade name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
+                                    SizedBox(height: h*0.01,),
+
+                                    Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.',textAlign: TextAlign.start,style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 10,height: 1.8)),
+
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       }
                   ),

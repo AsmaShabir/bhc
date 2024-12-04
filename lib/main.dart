@@ -2,11 +2,15 @@ import 'package:bhc/view/Bathroom.dart';
 import 'package:bhc/view/auth/signUp.dart';
 import 'package:bhc/view/choose_facade.dart';
 import 'package:bhc/view/choose_floor_plan.dart';
+import 'package:bhc/view/customize_home.dart';
 import 'package:bhc/view/doors.dart';
+import 'package:bhc/view/facade_image.dart';
 import 'package:bhc/view/kitchen.dart';
 import 'package:bhc/view/lighting.dart';
 import 'package:bhc/view/notifications.dart';
-import 'package:bhc/view/profile_creation.dart';
+import 'package:bhc/view/profile.dart';
+import 'package:bhc/view/auth/profile_creation.dart';
+import 'package:bhc/view/project.dart';
 import 'package:bhc/view/select_lot.dart';
 import 'package:bhc/view/success.dart';
 import 'package:bhc/view/windows.dart';
@@ -28,7 +32,7 @@ void main() async{
       useMaterial3: false,
     ),
 
-    home: notificationsView()
+    home: SignupView()
  ));
 
 }

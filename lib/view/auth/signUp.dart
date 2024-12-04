@@ -1,9 +1,11 @@
 
+import 'package:bhc/view/auth/profile_creation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../resources/components/appColors.dart';
+import '../../view_model/services/auth_services.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({super.key});
@@ -13,6 +15,8 @@ class SignupView extends StatefulWidget {
 }
 
 class _SignupViewState extends State<SignupView> {
+  AuthService authService =AuthService();
+
   @override
   Widget build(BuildContext context) {
     final h= MediaQuery.sizeOf(context).height;
@@ -31,9 +35,11 @@ class _SignupViewState extends State<SignupView> {
               Icon(Icons.email_rounded,size: 35,),
               SizedBox(width: w*0.06,),
 
-              TextButton(onPressed: (){},
+              TextButton(onPressed: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ProfileCreationView()));
+              },
                   child:
-                  Text('Sign up with email',style: GoogleFonts.poppins(color: Colors.black54,fontSize: 14),)
+                  Text('Sign up with email',textAlign: TextAlign.start,style: GoogleFonts.poppins(color: appColors.greyy,fontSize: 14),)
 
               ),
             ],
@@ -46,9 +52,11 @@ class _SignupViewState extends State<SignupView> {
               Image.asset('assets/images/google (2).png',height: 30,),
               SizedBox(width: w*0.06,),
 
-              TextButton(onPressed: (){},
+              TextButton(onPressed: (){
+                authService.handleGoogleButtonClick(context);
+              },
                   child:
-                  Text('Sign up without Google',style: GoogleFonts.poppins(color: Colors.black54,fontSize: 14),)
+                  Text('Sign up without Google',textAlign: TextAlign.start,style: GoogleFonts.poppins(color: appColors.greyy,fontSize: 14),)
 
               ),
             ],
@@ -63,7 +71,7 @@ class _SignupViewState extends State<SignupView> {
 
               TextButton(onPressed: (){},
                   child:
-                  Text('Sign up with facebook',style: GoogleFonts.poppins(color: Colors.black54,fontSize: 14),)
+                  Text('Sign up with facebook',textAlign: TextAlign.start,style: GoogleFonts.poppins(color: appColors.greyy,fontSize: 14),)
 
               ),
             ],
@@ -77,7 +85,7 @@ class _SignupViewState extends State<SignupView> {
               SizedBox(width: w*0.06,),
               TextButton(onPressed: (){},
                   child:
-                  Text('Continue without Sign up',style: GoogleFonts.poppins(color: Colors.black54,fontSize: 14),)
+                  Text('Continue without Sign up',textAlign: TextAlign.start,style: GoogleFonts.poppins(color: appColors.greyy,fontSize: 14),)
 
               ),
 
@@ -96,7 +104,7 @@ class _SignupViewState extends State<SignupView> {
                   height: 60,
                   width: w*0.9,
                   padding: EdgeInsets.all(12),
-                  decoration: BoxDecoration(color: appColors.orangee,borderRadius: BorderRadius.circular(12)),
+                  decoration: BoxDecoration(color: appColors.orangee,borderRadius: BorderRadius.circular(16)),
                   child: Center(child: Text("Login ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 14),)),),
               ),
             ),

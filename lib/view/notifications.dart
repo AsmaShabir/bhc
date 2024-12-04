@@ -57,8 +57,6 @@ class _notificationsViewState extends State<notificationsView> {
                                   crossAxisAlignment:CrossAxisAlignment.start,
                                   children: [
                                     Text('Notification name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 14),),
-                                    SizedBox(height: h*0.01,),
-
                                      Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry.',textAlign: TextAlign.start,style: GoogleFonts.roboto(color: appColors.lightGrey,fontSize: 10,height: 1.8)),
                                     SizedBox(height: h*0.01,),
 
