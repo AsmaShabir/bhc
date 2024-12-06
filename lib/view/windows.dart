@@ -29,7 +29,11 @@ class _windowsState extends State<windows> {
                 SizedBox(height: h*0.03,),
                 Row(
                   children: [
-                    Icon(Icons.arrow_back_ios,color: appColors.orangee,),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                        child: Icon(Icons.arrow_back_ios,color: appColors.orangee,)),
                     SizedBox(width: w*0.2,),
                     Text('Windows',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
 
@@ -42,37 +46,36 @@ class _windowsState extends State<windows> {
                       scrollDirection: Axis.vertical,
                       itemCount: 5,
                       itemBuilder: (context,index){
-                        return Flexible(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                            child: Row(
-                              children: [
-                                SizedBox(height: h*0.03,),
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            children: [
+                              SizedBox(height: h*0.03,),
 
-                              Container(
-                                height:h*0.15,
-                                width: w*0.3,
-                                decoration: BoxDecoration(
+                            Container(
+                              height:h*0.15,
+                              width: w*0.3,
+
+
+                              child: ClipRRect(
                                   borderRadius: BorderRadius.circular(14),
-                                ),
 
-                                child: Image.asset('assets/images/facade.png',fit: BoxFit.cover,),
-                              ),
-                                SizedBox(width:w*0.03 ,),
-                                Flexible(
-                                  child: Column(
-                                    crossAxisAlignment:CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Window name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
-                                      SizedBox(height: h*0.01,),
-
-                                      Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.',textAlign: TextAlign.start,style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 10,height: 1.8)),
-
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                  child: Image.asset('assets/images/facade.png',fit: BoxFit.cover,)),
                             ),
+                              SizedBox(width:w*0.03 ,),
+                              Flexible(
+                                child: Column(
+                                  crossAxisAlignment:CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Window name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
+                                    SizedBox(height: h*0.01,),
+
+                                    Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.',textAlign: TextAlign.start,style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 10,height: 1.8)),
+
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         );
                       }

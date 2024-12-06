@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../resources/components/appColors.dart';
+import 'customize_home.dart';
 
 class ChooseFacadeView extends StatefulWidget {
   const ChooseFacadeView({super.key});
@@ -83,6 +84,7 @@ class _ChooseFacadeViewState extends State<ChooseFacadeView> {
                   alignment: Alignment.center,
                   child: InkWell(
                     onTap: ()async{
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>CustomizeHomeView()));
 
 
                     },

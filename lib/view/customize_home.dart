@@ -1,10 +1,17 @@
 
 
+import 'package:bhc/resources/components/customize_home_widget.dart';
+import 'package:bhc/view/doors.dart';
+import 'package:bhc/view/kitchen.dart';
+import 'package:bhc/view/lighting.dart';
+import 'package:bhc/view/windows.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../resources/components/appColors.dart';
+import 'Bathroom.dart';
+import 'choose_floor_plan.dart';
 
 class CustomizeHomeView extends StatefulWidget {
   const CustomizeHomeView({super.key});
@@ -20,47 +27,58 @@ class _CustomizeHomeViewState extends State<CustomizeHomeView> {
     final w= MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(height: h*0.03,),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                SizedBox(height: h*0.03,),
 
-            Text('Customize your home',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 22,fontWeight: FontWeight.w500),),
-            SizedBox(height: h*0.03,),
+                Text('Customize your home',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 22,fontWeight: FontWeight.w500),),
+                SizedBox(height: h*0.03,),
+                InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>windows()));
+                    },
+                    child: HomeWidget(image: 'assets/images/home2.jpg', title: 'Windows')),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>DoorsView()));
 
-            Expanded(
-              child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  itemCount: 6,
-                  itemBuilder: (context,index){
-                   return Padding(
-                     padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                     child: Stack(
-                       alignment: Alignment.center,
-                       children: [
-                          ClipRRect(
-                            borderRadius:BorderRadius.circular(15),
-                              child: Image.asset('assets/images/flooring.jpg',height: 200,)),
-                           Positioned(
-                             top:0,
-                             bottom:0,
-                             left:0,
-                             right:0,
-                             child: Column(
-                               mainAxisAlignment:MainAxisAlignment.center,
-                               children: [
-                                 Text('Flooring',textAlign: TextAlign.center,style: GoogleFonts.roboto(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w500),),
-                               ],
-                             ),
-                           ),
-                       ],
-                     ),
-                   );
-                  }
-              ),
+                  },
+                    child: HomeWidget(image: 'assets/images/doors.jpg', title: 'Doors')),
+                InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>ChooseFloorView()));
+
+                    },
+                    child: HomeWidget(image: 'assets/images/flooring.jpg', title: 'Flooring')),
+                InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>KitchenView()));
+
+                    },
+                    child: HomeWidget(image: 'assets/images/kitchen.jpg', title: 'Kitchen fitting and fixtures')),
+                InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>bathroomFixtures()));
+
+                    },
+                    child: HomeWidget(image: 'assets/images/bathroom.jpg', title: 'Bathroom fixtures')),
+                InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Lighting()));
+
+                    },
+                    child: HomeWidget(image: 'assets/images/lightning.jpg', title: 'Lightning')),
+
+
+
+                SizedBox(height: h*0.01,),
+
+              ],
             ),
-            SizedBox(height: h*0.01,),
-
-          ],
+          ),
         ),
       ),
     );

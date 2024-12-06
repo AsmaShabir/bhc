@@ -1,4 +1,5 @@
 
+import 'package:bhc/view/dashboard1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -35,7 +36,7 @@ class _successViewState extends State<successView> {
               alignment: Alignment.center,
               child: InkWell(
                 onTap: ()async{
-
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>DashboardView1()));
 
                 },
                 child: Container(

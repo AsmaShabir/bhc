@@ -1,10 +1,14 @@
 
 import 'package:bhc/view/auth/profile_creation.dart';
+import 'package:bhc/view/bhc2/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
 
 import '../../resources/components/appColors.dart';
+import '../../view_model/auth_view_model.dart';
 import '../../view_model/services/auth_services.dart';
 
 class SignupView extends StatefulWidget {
@@ -19,6 +23,7 @@ class _SignupViewState extends State<SignupView> {
 
   @override
   Widget build(BuildContext context) {
+
     final h= MediaQuery.sizeOf(context).height;
     final w= MediaQuery.sizeOf(context).width;
     return Scaffold(
@@ -83,7 +88,9 @@ class _SignupViewState extends State<SignupView> {
             children: [
              Icon(Icons.newspaper,size: 25,),
               SizedBox(width: w*0.06,),
-              TextButton(onPressed: (){},
+              TextButton(onPressed: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>homeView()));
+              },
                   child:
                   Text('Continue without Sign up',textAlign: TextAlign.start,style: GoogleFonts.poppins(color: appColors.greyy,fontSize: 14),)
 
@@ -108,8 +115,9 @@ class _SignupViewState extends State<SignupView> {
                   child: Center(child: Text("Login ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 14),)),),
               ),
             ),
-              SizedBox(height: h*0.15,),
 
+
+          SizedBox(height: h*0.15,),
 
               Text('Privacy policy',style: GoogleFonts.poppins(decoration: TextDecoration.underline,decorationColor: appColors.orangee,color: appColors.orangee,fontSize: 10),),
 

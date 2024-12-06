@@ -1,4 +1,5 @@
 import 'package:bhc/resources/components/appColors.dart';
+import 'package:bhc/view/choose_facade.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,6 +60,7 @@ class _ChooseFloorViewState extends State<ChooseFloorView> {
                 child: InkWell(
                   onTap: ()async{
 
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ChooseFacadeView()));
 
                   },
                   child: Container(

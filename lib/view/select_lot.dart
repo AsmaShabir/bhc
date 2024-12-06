@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'choose_floor_plan.dart';
+
 class SelectLotView extends StatefulWidget {
   const SelectLotView({super.key});
 
@@ -66,7 +68,7 @@ class _SelectLotViewState extends State<SelectLotView> {
                 alignment: Alignment.center,
                 child: InkWell(
                   onTap: ()async{
-
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ChooseFloorView()));
 
                   },
                   child: Container(

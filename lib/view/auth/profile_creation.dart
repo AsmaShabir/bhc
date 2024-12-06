@@ -2,8 +2,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import '../../resources/components/appColors.dart';
+import '../../resources/components/customTextField.dart';
+import '../../utils/utils.dart';
+import '../../view_model/auth_view_model.dart';
+import 'login_view.dart';
 
 class ProfileCreationView extends StatefulWidget {
   const ProfileCreationView({super.key});
@@ -17,9 +22,13 @@ class _ProfileCreationViewState extends State<ProfileCreationView> {
   TextEditingController emailController =TextEditingController();
   TextEditingController contactController =TextEditingController();
   TextEditingController addressController =TextEditingController();
+  TextEditingController passController =TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
+    final authViewModel = Provider.of<AuthViewModel>(context);
+
     final h= MediaQuery.sizeOf(context).height;
     final w= MediaQuery.sizeOf(context).width;
     return Scaffold(
@@ -107,6 +116,21 @@ class _ProfileCreationViewState extends State<ProfileCreationView> {
                 SizedBox(
                   height: h*0.02,
                 ),
+                Text('password',style: GoogleFonts.poppins(color: Colors.black54,fontSize: 12)),
+
+                SizedBox(height: h*0.03,),
+                customTextFields.defaultTextField(
+                    validator: (val){
+                      if(val==null||val.isEmpty){
+                        return "Kindly enter password";
+                      }
+                      return null;
+                    },
+                    obs: true,
+                    hintText: "**********", controller: passController),
+                SizedBox(
+                  height: h*0.02,
+                ),
                 Text('phone number',style: GoogleFonts.poppins(color: Colors.black54,fontSize: 12)),
                 SizedBox(
                   height: h*0.03,
@@ -161,7 +185,12 @@ class _ProfileCreationViewState extends State<ProfileCreationView> {
                   alignment: Alignment.center,
                   child: InkWell(
                     onTap: ()async{
+                      final email=emailController.text.trim().toString();
+                      final name=nameController.text.trim().toString();
+                      final password=passController.text.trim().toString();
+                      final user= await authViewModel.signup(email, password,name,context);
 
+                      Utils.flushBarErrorMessage('account created Successfully', context);
 
                     },
                     child: Container(
@@ -173,7 +202,23 @@ class _ProfileCreationViewState extends State<ProfileCreationView> {
                   ),
                 ),
 
-
+                SizedBox(
+                  height: h*0.02,
+                ),
+                Row(children: [
+                  Expanded(child: Divider()),
+                  Text("Already have an account?",style: TextStyle(color:appColors.orangee,fontSize: 15,fontWeight: FontWeight.w400 )),
+                  SizedBox(width: 4,),
+                  InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>loginView()));
+                      },
+                      child: Text("Login",style: TextStyle(color:appColors.orangee,fontSize: 15,fontWeight: FontWeight.w600 ))),
+                  Expanded(child: Divider()),
+                ],),
+                SizedBox(
+                  height: h*0.02,
+                ),
               ],
             ),
           ),
