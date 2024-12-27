@@ -16,7 +16,7 @@ class AuthViewModel with ChangeNotifier{
   final _auth = FirebaseAuth.instance;
   final _firestore=FirebaseFirestore.instance;
   User? _user;
-
+ int currentTab=0;
 
   User? get user =>_user;
   AuthViewModel(){
@@ -50,6 +50,10 @@ class AuthViewModel with ChangeNotifier{
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>homeView()));
 
     }
+  }
+  changeActiveTab(int index){
+    currentTab = index;
+    notifyListeners();
   }
 
 
