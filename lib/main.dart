@@ -1,5 +1,6 @@
 
 import 'package:bhc/view/auth/signUp.dart';
+import 'package:bhc/view/notifications.dart';
 import 'package:bhc/view_model/auth_view_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ void main() async{
         useMaterial3: false,
       ),
 
-      home: SignupView()
+      home: notificationsView()
    ),
  ));
 
