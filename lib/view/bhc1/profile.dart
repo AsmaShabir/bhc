@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});

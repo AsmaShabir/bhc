@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../resources/components/appColors.dart';
 import '../../resources/components/bottom_nav.dart';
-import '../project_images.dart';
+import '../bhc1/project_images.dart';
 
 
 

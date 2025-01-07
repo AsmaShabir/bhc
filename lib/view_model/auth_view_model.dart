@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import '../repo/authRepo.dart';
 import '../utils/utils.dart';
 import '../view/bhc2/home.dart';
-import '../view/select_lot.dart';
+import '../view/bhc1/select_lot.dart';
 
 class AuthViewModel with ChangeNotifier{
   final repo= AuthRepository();

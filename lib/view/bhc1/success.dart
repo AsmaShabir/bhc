@@ -1,10 +1,10 @@
 
-import 'package:bhc/view/dashboard1.dart';
+import 'package:bhc/view/bhc1/dashboard1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 
 class successView extends StatefulWidget {
   const successView({super.key});

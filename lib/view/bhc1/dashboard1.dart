@@ -1,13 +1,13 @@
 
-import 'package:bhc/view/profile.dart';
-import 'package:bhc/view/project.dart';
+import 'package:bhc/view/bhc1/profile.dart';
+import 'package:bhc/view/bhc1/project.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
-import '../resources/components/bottom_nav.dart';
-import '../view/project_images.dart';
+import '../../resources/components/appColors.dart';
+import '../../resources/components/bottom_nav.dart';
+import 'project_images.dart';
 
 class DashboardView1 extends StatefulWidget {
   const DashboardView1({super.key});

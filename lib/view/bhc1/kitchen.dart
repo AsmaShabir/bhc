@@ -4,16 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 
-class bathroomFixtures extends StatefulWidget {
-  const bathroomFixtures({super.key});
+class KitchenView extends StatefulWidget {
+  const KitchenView({super.key});
 
   @override
-  State<bathroomFixtures> createState() => _bathroomFixturesState();
+  State<KitchenView> createState() => _KitchenViewState();
 }
 
-class _bathroomFixturesState extends State<bathroomFixtures> {
+class _KitchenViewState extends State<KitchenView> {
   @override
   Widget build(BuildContext context) {
     final h= MediaQuery.sizeOf(context).height;
@@ -34,9 +34,8 @@ class _bathroomFixturesState extends State<bathroomFixtures> {
                         Navigator.pop(context);
                       },
                       child: Icon(Icons.arrow_back_ios,color: appColors.orangee,)),
-                  SizedBox(width: w*0.2,),
 
-                  Text('Bathroom fixtures',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
+                  Text('Kitchen fitting and fixtures',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
 
                 ],
               ),
@@ -56,9 +55,7 @@ class _bathroomFixturesState extends State<bathroomFixtures> {
                             Container(
                               height:h*0.15,
                               width: w*0.3,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(14),
-                              ),
+
 
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(14),

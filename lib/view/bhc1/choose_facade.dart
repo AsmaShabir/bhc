@@ -1,11 +1,11 @@
 
 
-import 'package:bhc/view/facade_image.dart';
+import 'package:bhc/view/bhc1/facade_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 import 'customize_home.dart';
 
 class ChooseFacadeView extends StatefulWidget {

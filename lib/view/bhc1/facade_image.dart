@@ -3,10 +3,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 
-class ProjectImageView extends StatelessWidget {
-  const ProjectImageView({super.key});
+class FacadeImageView extends StatelessWidget {
+  const FacadeImageView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ProjectImageView extends StatelessWidget {
         children: [
           Container(
             height:h*0.6,
-            width: w*0.85,
+            width: w*0.7,
             decoration: BoxDecoration(
 
             ),
@@ -36,7 +36,7 @@ class ProjectImageView extends StatelessWidget {
             child: InkWell(
               onTap: ()async{
 
-                Navigator.pop(context);
+                  Navigator.pop(context);
               },
               child: Container(
                 height: 60,

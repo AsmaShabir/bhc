@@ -4,16 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 
-class DoorsView extends StatefulWidget {
-  const DoorsView({super.key});
+class bathroomFixtures extends StatefulWidget {
+  const bathroomFixtures({super.key});
 
   @override
-  State<DoorsView> createState() => _DoorsViewState();
+  State<bathroomFixtures> createState() => _bathroomFixturesState();
 }
 
-class _DoorsViewState extends State<DoorsView> {
+class _bathroomFixturesState extends State<bathroomFixtures> {
   @override
   Widget build(BuildContext context) {
     final h= MediaQuery.sizeOf(context).height;
@@ -35,7 +35,8 @@ class _DoorsViewState extends State<DoorsView> {
                       },
                       child: Icon(Icons.arrow_back_ios,color: appColors.orangee,)),
                   SizedBox(width: w*0.2,),
-                  Text('Doors',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
+
+                  Text('Bathroom fixtures',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
 
                 ],
               ),
@@ -69,7 +70,7 @@ class _DoorsViewState extends State<DoorsView> {
                               child: Column(
                                 crossAxisAlignment:CrossAxisAlignment.start,
                                 children: [
-                                  Text('Door name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
+                                  Text('Name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
                                   SizedBox(height: h*0.01,),
 
                                   Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.',textAlign: TextAlign.start,style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 10,height: 1.8)),

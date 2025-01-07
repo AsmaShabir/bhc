@@ -1,10 +1,10 @@
 
-import 'package:bhc/view/profile.dart';
-import 'package:bhc/view/project.dart';
+import 'package:bhc/view/bhc1/profile.dart';
+import 'package:bhc/view/bhc1/project.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/bhc2/dashboard.dart';
-import '../../view/dashboard1.dart';
+import '../../view/bhc1/dashboard1.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   final int currentIndex;

@@ -1,15 +1,15 @@
 
 
 import 'package:bhc/resources/components/customize_home_widget.dart';
-import 'package:bhc/view/doors.dart';
-import 'package:bhc/view/kitchen.dart';
-import 'package:bhc/view/lighting.dart';
-import 'package:bhc/view/windows.dart';
+import 'package:bhc/view/bhc1/doors.dart';
+import 'package:bhc/view/bhc1/kitchen.dart';
+import 'package:bhc/view/bhc1/lighting.dart';
+import 'package:bhc/view/bhc1/windows.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 import 'Bathroom.dart';
 import 'choose_floor_plan.dart';
 

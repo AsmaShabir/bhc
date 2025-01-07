@@ -1,11 +1,11 @@
 
 
-import 'package:bhc/view/success.dart';
+import 'package:bhc/view/bhc1/success.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 
 class Lighting extends StatefulWidget {
   const Lighting({super.key});

@@ -4,16 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../resources/components/appColors.dart';
+import '../../resources/components/appColors.dart';
 
-class KitchenView extends StatefulWidget {
-  const KitchenView({super.key});
+class DoorsView extends StatefulWidget {
+  const DoorsView({super.key});
 
   @override
-  State<KitchenView> createState() => _KitchenViewState();
+  State<DoorsView> createState() => _DoorsViewState();
 }
 
-class _KitchenViewState extends State<KitchenView> {
+class _DoorsViewState extends State<DoorsView> {
   @override
   Widget build(BuildContext context) {
     final h= MediaQuery.sizeOf(context).height;
@@ -34,8 +34,8 @@ class _KitchenViewState extends State<KitchenView> {
                         Navigator.pop(context);
                       },
                       child: Icon(Icons.arrow_back_ios,color: appColors.orangee,)),
-
-                  Text('Kitchen fitting and fixtures',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
+                  SizedBox(width: w*0.2,),
+                  Text('Doors',style: GoogleFonts.roboto(color: appColors.orangee,fontSize: 20,fontWeight: FontWeight.w500),),
 
                 ],
               ),
@@ -55,7 +55,9 @@ class _KitchenViewState extends State<KitchenView> {
                             Container(
                               height:h*0.15,
                               width: w*0.3,
-
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(14),
+                              ),
 
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(14),
@@ -67,7 +69,7 @@ class _KitchenViewState extends State<KitchenView> {
                               child: Column(
                                 crossAxisAlignment:CrossAxisAlignment.start,
                                 children: [
-                                  Text('Name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
+                                  Text('Door name',style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 13),),
                                   SizedBox(height: h*0.01,),
 
                                   Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.',textAlign: TextAlign.start,style: GoogleFonts.roboto(color: appColors.greyy,fontSize: 10,height: 1.8)),
