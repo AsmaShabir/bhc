@@ -1,8 +1,4 @@
-
-import 'package:bhc/view/admin/portal.dart';
-import 'package:bhc/view/auth/profile_creation.dart';
 import 'package:bhc/view/auth/signUp_options.dart';
-import 'package:bhc/view/bhc1/notifications.dart';
 import 'package:bhc/view_model/auth_view_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
