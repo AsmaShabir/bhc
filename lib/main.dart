@@ -27,7 +27,7 @@ void main() async{
         useMaterial3: false,
       ),
 
-      home: ProfileCreationView()
+      home: SignupOptionsView()
    ),
  ));
 

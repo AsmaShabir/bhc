@@ -11,14 +11,14 @@ import '../../resources/components/appColors.dart';
 import '../../view_model/auth_view_model.dart';
 import '../../view_model/services/auth_services.dart';
 
-class SignupView extends StatefulWidget {
-  const SignupView({super.key});
+class SignupOptionsView extends StatefulWidget {
+  const SignupOptionsView({super.key});
 
   @override
-  State<SignupView> createState() => _SignupViewState();
+  State<SignupOptionsView> createState() => _SignupOptionsViewState();
 }
 
-class _SignupViewState extends State<SignupView> {
+class _SignupOptionsViewState extends State<SignupOptionsView> {
   AuthService authService =AuthService();
 
   @override
